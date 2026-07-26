@@ -930,36 +930,35 @@ input{
   grid-area: speedHint;
 }
 
-.callsign-popup {
-  position: absolute;
-  background: #1a1a2e;
-  border: 1px solid #444;
-  border-radius: 6px;
-  padding: 6px 0;
-  z-index: 1000;
-  min-width: 140px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  top: calc( 28px * var(--SCALE));
+.callsign-links {
+  padding: 4px 0;
 }
 
-.callsign-popup-header {
-  padding: 4px 12px;
+.callsign-links-header {
   font-size: calc( 11px * var(--SCALE));
   color: #aaa;
-  border-bottom: 1px solid #444;
-  margin-bottom: 4px;
+  padding: 2px 0;
 }
 
-.callsign-popup-link {
-  display: block;
-  padding: 4px 12px;
+.callsign-links-item {
+  display: inline-block;
+  padding: 2px 8px 2px 0;
   font-size: calc( 11px * var(--SCALE));
   color: #8ab4f8;
-  text-decoration: none;
   cursor: pointer;
 }
 
-.callsign-popup-link:hover {
-  background: #2a2a4e;
+.callsign-links-item:hover {
   color: #fff;
+  text-decoration: underline;
+}
+
+.callsign-links-item.disabled {
+  color: #555;
+  cursor: default;
+}
+
+.callsign-links-item.disabled:hover {
+  color: #555;
+  text-decoration: none;
 }

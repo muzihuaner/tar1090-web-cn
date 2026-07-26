@@ -3022,20 +3022,10 @@ function initMap() {
         refreshFilter();
     });
 
-    jQuery('#selected_callsign').on('click', function (e) {
-        e.stopPropagation();
-        jQuery('#callsign_menu').toggle();
+    jQuery('#callsign_menu').on('click', '.callsign-links-item', function () {
+        var url = jQuery(this).data('url');
+        if (url) window.open(url, '_blank');
     });
-
-    jQuery(document).on('click', function () {
-        jQuery('#callsign_menu').hide();
-    });
-
-    jQuery('#callsign_menu').on('click', function (e) {
-        e.stopPropagation();
-    });
-
-
 
     new Toggle({
         key: "darkerColors",
@@ -3583,14 +3573,13 @@ function refreshSelected() {
     const callsignMenu = jQuery('#callsign_menu');
     const flight = selected.flight || selected.name || '';
     const hex = selected.icao || '';
-    if (flight && hex) {
-      callsignMenu.find('#link_fr24').attr('href', 'https://www.flightradar24.com/' + flight + '/');
-      callsignMenu.find('#link_fa').attr('href', 'https://flightaware.com/live/modes/' + hex.toLowerCase() + '/redirect');
-      callsignMenu.find('#link_flightera').attr('href', 'https://www.flightera.net/zh/flight/' + flight);
-      callsignMenu.find('#link_planefinder').attr('href', 'https://planefinder.net/flight/number/' + flight);
-      callsignMenu.find('#link_adsbx').attr('href', 'https://globe.adsbexchange.com/?icao=' + hex.toLowerCase());
-      callsignMenu.find('#link_variflight').attr('href', 'https://flightadsb.variflight.com/tracker/' + flight);
-    }
+    callsignMenu.find('#link_fr24').data('url', flight ? 'https://www.flightradar24.com/' + flight + '/' : null);
+    callsignMenu.find('#link_fa').data('url', hex ? 'https://flightaware.com/live/modes/' + hex.toLowerCase() + '/redirect' : null);
+    callsignMenu.find('#link_flightera').data('url', flight ? 'https://www.flightera.net/zh/flight/' + flight : null);
+    callsignMenu.find('#link_planefinder').data('url', flight ? 'https://planefinder.net/flight/number/' + flight : null);
+    callsignMenu.find('#link_adsbx').data('url', hex ? 'https://globe.adsbexchange.com/?icao=' + hex.toLowerCase() : null);
+    callsignMenu.find('#link_variflight').data('url', flight ? 'https://flightadsb.variflight.com/tracker/' + flight : null);
+    callsignMenu.find('.callsign-links-item').toggleClass('disabled', !flight && !hex);
 
     if (showTrace) {
         if (selected.position_time) {

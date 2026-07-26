@@ -84,16 +84,7 @@
 
           <div class="highlightedTitle infoBlockSection">
             <div>
-              <span class="identLarge" title="呼号：通常是空中交通管制呼号或飞机注册号，由飞行员输入应答机，点击可查询航班信息" id="selected_callsign" style="cursor:pointer">n/a</span>
-              <div id="callsign_menu" class="callsign-popup" style="display:none">
-                <div class="callsign-popup-header">查询航班信息</div>
-                <a class="callsign-popup-link" target="_blank" id="link_fr24" rel="noreferrer">FlightRadar24</a>
-                <a class="callsign-popup-link" target="_blank" id="link_fa" rel="noreferrer">FlightAware</a>
-                <a class="callsign-popup-link" target="_blank" id="link_flightera" rel="noreferrer">Flightera</a>
-                <a class="callsign-popup-link" target="_blank" id="link_planefinder" rel="noreferrer">PlaneFinder</a>
-                <a class="callsign-popup-link" target="_blank" id="link_adsbx" rel="noreferrer">ADSBExchange</a>
-                <a class="callsign-popup-link" target="_blank" id="link_variflight" rel="noreferrer">Variflight</a>
-              </div>
+              <span class="identLarge" title="呼号：通常是空中交通管制呼号或飞机注册号，由飞行员输入应答机" id="selected_callsign">n/a</span>
             </div>
             <div id="selected_icao" title="ICAO六位码：飞机唯一的ICAO识别号，以十六进制格式显示，由飞机应答机设置（可能出错，我们会显示错误六位码对应的数据）">
             </div>
@@ -232,6 +223,19 @@
                   </div>
                   <div class="infoData">
                     <span id="selected_squawk1"></span>
+                  </div>
+                </td>
+              </tr>
+              <tr id="callsign_menu_row">
+                <td>
+                  <div id="callsign_menu" class="callsign-links">
+                    <div class="callsign-links-header">查询航班信息</div>
+                    <span class="callsign-links-item" id="link_fr24">FlightRadar24</span>
+                    <span class="callsign-links-item" id="link_fa">FlightAware</span>
+                    <span class="callsign-links-item" id="link_flightera">Flightera</span>
+                    <span class="callsign-links-item" id="link_planefinder">PlaneFinder</span>
+                    <span class="callsign-links-item" id="link_adsbx">ADSBExchange</span>
+                    <span class="callsign-links-item" id="link_variflight">Variflight</span>
                   </div>
                 </td>
               </tr>
