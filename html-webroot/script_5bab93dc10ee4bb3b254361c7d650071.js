@@ -3022,6 +3022,19 @@ function initMap() {
         refreshFilter();
     });
 
+    jQuery('#selected_callsign').on('click', function (e) {
+        e.stopPropagation();
+        jQuery('#callsign_menu').toggle();
+    });
+
+    jQuery(document).on('click', function () {
+        jQuery('#callsign_menu').hide();
+    });
+
+    jQuery('#callsign_menu').on('click', function (e) {
+        e.stopPropagation();
+    });
+
 
 
     new Toggle({
