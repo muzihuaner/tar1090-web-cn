@@ -20,37 +20,6 @@
 
 将 `html-webroot/` 部署到任意 Web 服务器即可使用。需要后端提供 tar1090 数据接口。
 
-Docker 部署示例
-docker-compose.yml
-
-```
-version: "3.8"
-
-services:
-  tar1090:
-    image: ghcr.1ms.run/sdr-enthusiasts/docker-tar1090:latest
-    container_name: tar1090
-    hostname: tar1090
-    restart: always
-    environment:
-      - TZ=Asia/Shanghai
-      - LAT=40.36
-      - LONG=113.75
-      - READSB_DEVICE_TYPE=rtlsdr
-      - READSB_GAIN=auto
-      - READSB_RTLSDR_DEVICE=0
-    ports:
-      - 8078:80
-    tmpfs:
-      - /run:exec,size=256M
-      - /var/log
-    # USB passthrough
-    device_cgroup_rules:
-      - "c 189:* rwm"
-    volumes:
-      - /dev/bus/usb:/dev/bus/usb:ro
-      - /opt/tar1090/html-webroot:/usr/local/share/tar1090/html-webroot
-```
 
 ## 版本
 
