@@ -8051,13 +8051,13 @@ function initReplay(chunk, data) {
 
 function setReplayTimeHint(date) {
     if (true || utcTimesHistoric) {
-        jQuery("#replayDateHintLocal").html(TIMEZONE + " Date: " + lDateString(date));
+        jQuery("#replayDateHintLocal").html(TIMEZONE + " 日期: " + lDateString(date));
         jQuery("#replayDateHint").html("" + zDateString(date));
         jQuery("#replayTimeHint").html("UTC:" + NBSP + zuluTime(date) + ' / ' + TIMEZONE + ":" + NBSP + localTime(date));
     } else {
         jQuery("#replayDateHintLocal").html("");
-        jQuery("#replayDateHint").html("Date: " + lDateString(date));
-        jQuery("#replayTimeHint").html("Time: " + localTime(date) + NBSP + TIMEZONE);
+        jQuery("#replayDateHint").html("日期: " + lDateString(date));
+        jQuery("#replayTimeHint").html("时间: " + localTime(date) + NBSP + TIMEZONE);
     }
 }
 function replayOnSliderMove() {
@@ -8512,13 +8512,13 @@ function showReplayBar(){
             max: Math.pow(1000, 1 / slideBase),
             slide: function(event, ui) {
                 replay.speed = Math.pow(ui.value, slideBase).toFixed(1);
-                jQuery('#replaySpeedHint').text('Speed: ' + replay.speed + 'x');
+                jQuery('#replaySpeedHint').text('速度: ' + replay.speed + 'x');
             },
             change: function(event, ui) {
                 replayStep();
             },
         });
-        jQuery('#replaySpeedHint').text('Speed: ' + replay.speed + 'x');
+        jQuery('#replaySpeedHint').text('速度: ' + replay.speed + 'x');
 
         jQuery("#selected_showTrace_hide").hide();
 
