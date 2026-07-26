@@ -171,7 +171,7 @@ if (0 && window.self != window.top) {
 
         fakeLocalStorage();
         /*
-    const splat = "Your browser isn't supporting localStorage.\nSafari / Apple: turn off \"Block Cookies\"!";
+    const splat = "你的浏览器不支持localStorage。\nSafari / Apple: 关闭\"Block Cookies\"！";
     jQuery("#js_error").text(splat);
     jQuery("#js_error").css('display','block');
     throw 'FATAL, your browser does not support localStorage!';
@@ -551,7 +551,7 @@ if (uuid != null) {
 
         setTimeout(function() {
             jQuery("#loader").addClass("hidden");
-            jQuery("#update_error_detail").text("Seems the decoder / receiver / backend isn't working correctly!");
+            jQuery("#update_error_detail").text("解码器/接收器/后端似乎运行不正常！");
             jQuery("#update_error").css('display','block');
         }, 2000);
 
@@ -575,8 +575,8 @@ if (uuid != null) {
         haveTraces = Boolean(data.haveTraces || data.globeIndexGrid);
 
         if (data.readsb) {
-            jQuery("#decoder_pre").text("decoder:");
-            jQuery("#decoder_link").text("readsb");
+        jQuery("#decoder_pre").text("解码器：");
+        jQuery("#decoder_link").text("readsb");
             jQuery("#decoder_link").attr("href", "https://github.com/wiedehopf/readsb#readsb");
         }
 
@@ -889,7 +889,7 @@ function webAssemblyFail(e) {
     if (0 && aggregator && !uuid) {
         inhibitFetch = true;
         reApi = false;
-        jQuery("#generic_error_detail").text("Your browser is not supporting webassembly, this website does not work without webassembly.");
+            jQuery("#generic_error_detail").text("你的浏览器不支持WebAssembly，此网站需要WebAssembly才能运行。");
         jQuery("#generic_error").css('display','block');
     }
     if (e) {

@@ -10,7 +10,7 @@ let UP_TRIANGLE='\u25b2'; // U+25B2 BLACK UP-POINTING TRIANGLE
 let DOWN_TRIANGLE='\u25bc'; // U+25BC BLACK DOWN-POINTING TRIANGLE
 let EM_QUAD = '\u2001';
 
-let TrackDirections = ["North","NE","East","SE","South","SW","West","NW"];
+let TrackDirections = ["北","东北","东","东南","南","西南","西","西北"];
 let TrackDirectionArrows = ["\u21e7","\u2b00","\u21e8","\u2b02","\u21e9","\u2b03","\u21e6","\u2b01"];
 
 let UnitLabels = {
@@ -22,25 +22,25 @@ let UnitLabels = {
 };
 
 let aircraftCategories = {
-    'A0': 'Unspecified powered aircraft',
-    'A1': `Light (< 15${NNBSP}500${NBSP}lb)`,
-    'A2': `Small (15${NNBSP}500 to 75${NNBSP}000${NBSP}lb)`,
-    'A3': `Large (75${NNBSP}000 to 300${NNBSP}000${NBSP}lb)`,
-    'A4': 'High Vortex Large(aircraft such as B-757)',
-    'A5': `Heavy (> 300${NNBSP}000${NBSP}lb)`,
-    'A6': `High Performance (> 5${NBSP}g acceleration and > 400${NBSP}kt)`,
-    'A7': 'Rotorcraft',
-    'B0': 'Unspecified unpowered aircraft or UAV or spacecraft',
-    'B1': 'Glider/sailplane',
-    'B2': 'Lighter-than-Air',
-    'B3': 'Parachutist/Skydiver',
-    'B4': 'Ultralight/hang-glider/paraglider',
-    'B6': 'Unmanned Aerial Vehicle',
-    'B7': 'Space/Trans-atmospheric vehicle',
-    'C0': 'Unspecified ground installation or vehicle',
-    'C1': `Surface Vehicle ${ENDASH} Emergency Vehicle`,
-    'C2': `Surface Vehicle ${ENDASH} Service Vehicle`,
-    'C3': 'Fixed Ground or Tethered Obstruction'
+    'A0': '未指定动力飞机',
+    'A1': `轻型 (< 15${NNBSP}500${NBSP}lb)`,
+    'A2': `小型 (15${NNBSP}500 至 75${NNBSP}000${NBSP}lb)`,
+    'A3': `大型 (75${NNBSP}000 至 300${NNBSP}000${NBSP}lb)`,
+    'A4': '高涡流大型机(如 B-757)',
+    'A5': `重型 (> 300${NNBSP}000${NBSP}lb)`,
+    'A6': `高性能 (> 5${NBSP}g 加速度且 > 400${NBSP}kt)`,
+    'A7': '旋翼机',
+    'B0': '未指定无动力飞机或无人机或航天器',
+    'B1': '滑翔机',
+    'B2': '轻于空气飞行器',
+    'B3': '跳伞者/高空跳伞',
+    'B4': '超轻型/悬挂滑翔机/滑翔伞',
+    'B6': '无人机',
+    'B7': '太空/跨大气层飞行器',
+    'C0': '未指定地面装置或车辆',
+    'C1': `地面车辆 ${ENDASH} 应急车辆`,
+    'C2': `地面车辆 ${ENDASH} 服务车辆`,
+    'C3': '固定地面或系留障碍物'
 };
 
 // formatting helpers
